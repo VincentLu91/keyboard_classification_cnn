@@ -6,4 +6,8 @@ Uses Convolutional Neural Network for image recognition. In this case it is to c
 
 Currently the network uses 10 epochs for short training but sufficient for good image classification.
 
-It algorithm follows the steps of the convolution: We select a feature detector (64x64 RGB) for convolving the image. We then reduce the size of feature maps for pooling, followed by flattening the layer into a string of nodes. Finally, we build a fully connected layer into a network akin to an artificial neural network.
+It algorithm follows the steps of the convolution: We build feature detectors (64x64 RGB) for convolving the image. We then apply max pooling with a 2x2 pool to reduce the size of the features from the convolution step, resulting in a pool feature map.
+
+Next, we apply the flattening operation to convert the map into a 1-dimensional vector of nodes for building the artificial neural network, which is then achieved with the Dense() method. 
+
+Finally, the network is compiled and applied to train on different keyboard images
